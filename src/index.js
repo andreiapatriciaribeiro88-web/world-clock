@@ -1,4 +1,15 @@
 function updateTime() {
+  let currentLocationElement = document.querySelector("#current-location");
+  let currentDateElement = currentLocationElement.querySelector(".date");
+  let currentTimeElement = currentLocationElement.querySelector(".time");
+  let currentTimeZone = moment.tz.guess();
+  let currentTime = moment().tz(currentTimeZone);
+
+  currentDateElement.innerHTML = currentTime.format("MMMM Do YYYY");
+  currentTimeElement.innerHTML = currentTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
   let sydneyElement = document.querySelector("#sydney");
   let sydneyDateElement = sydneyElement.querySelector(".date");
   let sydneyTimeElement = sydneyElement.querySelector(".time");
