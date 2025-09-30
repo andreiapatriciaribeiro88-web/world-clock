@@ -70,6 +70,7 @@ function updateTime() {
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "all") {
+    location.reload();
     return;
   }
   if (cityTimeZone === "current") {
@@ -87,8 +88,7 @@ function updateCity(event) {
     <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
     "A"
   )}</small></div>
-  </div>
-  `;
+  </div>`;
 }
 
 updateTime();
