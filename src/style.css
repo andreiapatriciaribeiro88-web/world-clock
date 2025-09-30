@@ -74,6 +74,9 @@ select:hover {
   font-size: 35px;
   color: #344767;
 }
+.time small {
+  font-size: 15px;
+}
 footer {
   margin-top: 50px;
   text-align: center;
